@@ -31,9 +31,19 @@ def count_elements(array)
   end    
 end
 
-def merge_data(array)
-  # combines two nested data structures into one
+def merge_data(keys, data)
+  merge = []
+  keys.map do |name_hash|
+    data.map do |att_hash|
+      att_hash.map do |name, atts|
+        if name_hash[:first_name] == name
+          name_hash.merge(atts)
+        end
+      end
+    end
+  end
 end
+
 
 def find_cool(array)
   # finds all cool hashes
