@@ -62,5 +62,7 @@ def organize_schools(array)
   organized_schools = {}
   array.each do |school, school_hash|
     organized_schools[school_hash[:location]] ||= []
-    organized_schools[school_hash[:location]] << 
+    organized_schools[school_hash[:location]] << school
+  end
+  organized_schools
 end
