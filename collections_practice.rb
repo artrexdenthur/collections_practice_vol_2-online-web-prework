@@ -37,11 +37,13 @@ def merge_data(keys, data)
     data.map do |att_hash|
       att_hash.map do |name, atts|
         if name_hash[:first_name] == name
-          name_hash.merge(atts)
+          merge.push(name_hash.merge(atts))
+          
         end
       end
     end
   end
+  merge
 end
 
 
