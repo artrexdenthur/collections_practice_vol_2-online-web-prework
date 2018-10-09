@@ -60,6 +60,7 @@ end
 def organize_schools(array)
   # organizes schools by location
   organized_schools = {}
-  array.each do |school_hash|
-    organized_schools[:]
+  array.each do |school, school_hash|
+    organized_schools[school_hash[:location]] ||= []
+    organized_schools[school_hash[:location]] << 
 end
