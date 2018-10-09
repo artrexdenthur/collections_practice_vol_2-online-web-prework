@@ -59,4 +59,7 @@ end
 
 def organize_schools(array)
   # organizes schools by location
+  organized_schools = []
+  array.each do |school_hash|
+    
 end
