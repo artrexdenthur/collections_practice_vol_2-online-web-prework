@@ -48,7 +48,13 @@ end
 
 
 def find_cool(array)
-  # finds all cool hashes
+  cool_hashes = []
+  array.each do |hash|
+    if hash[:temperature] == 'cool'
+      cool_hashes.push(hash:temperature)
+    end
+  end
+  cool_hashes
 end
 
 def organize_schools(array)
